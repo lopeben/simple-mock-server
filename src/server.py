@@ -142,6 +142,14 @@ def SimpleHandlerFactory(configuration):
 
         def do_POST(self):
             response = self.retrive_response(self.path, "POST")
+            print("\n----- Request Start ----->\n")
+            print(self.path)
+            request_headers = self.headers
+            content_length = request_headers.getheaders('Content-Length')
+            length = int(content_length[0]) if content_length else 0
+            print(request_headers)
+            print(self.rfile.read(length))
+            print("<----- Request End -----\n")
             self.send(self.path, response)
 
         def do_DELETE(self):

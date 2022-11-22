@@ -1,7 +1,7 @@
 {
 
-    "hostname":"0.0.0.0",
-    "port":8000,
+    "hostname":"192.168.1.1",
+    "port":5001,
     "responses":[
         {
             "method":"GET",
@@ -93,6 +93,72 @@
             "path":"/add",
             "responseCode":201,
             "body":"{ \"type\":\"POST\", \"status\": \"Created!\" }",
+            "headers":[
+                {
+                    "Content-Type":"application/json"
+                }
+            ]
+        },
+        {
+            "method":"POST",
+            "path":"/wifiSta",
+            "responseCode":200,
+            "body":"{ \"type\":\"POST\", \"success\": \"true\" }",
+            "headers":[
+                {
+                    "Content-Type":"application/json"
+                }
+            ]
+        },
+        {
+            "method":"POST",
+            "path":"/login",
+            "responseCode":200,
+            "body":"{\"serial_number\":\"SP191304SB2172\",\"mac_address\":\"3881D7202437\"}",
+            "headers":[
+                {
+                    "Content-Type":"application/json"
+                }
+            ]
+        },
+        {
+            "method":"POST",
+            "path":"/cacert",
+            "responseCode":200,
+            "body":"{ \"type\":\"POST\", \"success\": \"true\" }",
+            "headers":[
+                {
+                    "Content-Type":"application/json"
+                }
+            ]
+        },
+        {
+            "method":"POST",
+            "path":"/clcert",
+            "responseCode":200,
+            "body":"{ \"type\":\"POST\", \"success\": \"true\" }",
+            "headers":[
+                {
+                    "Content-Type":"application/json"
+                }
+            ]
+        },
+        {
+            "method":"POST",
+            "path":"/ckkey",
+            "responseCode":200,
+            "body":"{ \"type\":\"POST\", \"success\": \"true\" }",
+            "headers":[
+                {
+                    "Content-Type":"application/json"
+                }
+            ]
+        },
+        {
+            "method":"POST",
+            "path":"/url",
+            "responseCode":200,
+            "body":"{ \"type\":\"POST\", \"success\": \"true\" }",
             "headers":[
                 {
                     "Content-Type":"application/json"
